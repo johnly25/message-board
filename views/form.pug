@@ -1,0 +1,17 @@
+extends layout
+
+block content 
+    h1 Add new message
+    form(action="/new" method="POST") 
+        div
+            label(for="user") User
+        div
+            input(type="text" placeholder="" id='user' name='user')
+        br
+        div
+            label(for="msg") Message 
+        div 
+            input(type="text" placeholder="" id='msg' name='msg') 
+        br
+        div 
+        button(type="submit") Submit
