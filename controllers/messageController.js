@@ -19,7 +19,7 @@ exports.messagesGet = async (req, res) => {
         const today = new Date();
         return { ...msg, today: today.toDateString() === new Date(msg.date).toDateString() }
     });
-    res.render('index', { title: "Mini Messageboardsss", messages: newMessages });
+    res.render('index', { title: "Mini Messageboards", messages: newMessages });
 }
 
 exports.createMessageGet = (req, res) => {
