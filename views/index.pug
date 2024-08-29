@@ -4,9 +4,12 @@ block content
   h1= title
   p Welcome to #{title}
   br
-  each item in messages
-    p #{item.user}: #{item.text}
-    p #{item.added}
+  each msg in messages
+    p #{msg.username}: #{msg.message}
+    if msg.today 
+      p Today #{msg.time_only}
+    else 
+      p #{msg.date_formatted}
     br
-
+  
   a(href='/new') New Message

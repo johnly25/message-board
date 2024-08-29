@@ -2,16 +2,23 @@ extends layout
 
 block content 
     h1 Add new message
+    if errors
+        ul
+            for error in errors 
+                li= error.msg
     form(action="/new" method="POST") 
         div
-            label(for="user") User
+            label(for="username") User
         div
-            input(type="text" placeholder="" id='user' name='user')
+            input(type="text" placeholder="" id='username' name='username' required)
         br
         div
-            label(for="msg") Message 
+            label(for="message") Message 
         div 
-            input(type="text" placeholder="" id='msg' name='msg') 
+            input(type="text" placeholder="" id='message' name='message' required) 
         br
         div 
         button(type="submit") Submit
+        br
+        br
+        a(href='/') Back to home
