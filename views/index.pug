@@ -7,9 +7,9 @@ block content
   each msg in messages
     p #{msg.username}: #{msg.message}
     if msg.today 
-      p Today #{msg.time_only}
+      p Today #{msg.time_pacific}
     else 
-      p #{msg.date_formatted}
+      p #{msg.time_pacific}
     br
   
   a(href='/new') New Message
