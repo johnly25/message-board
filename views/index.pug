@@ -9,7 +9,7 @@ block content
     if msg.today 
       p Today #{msg.time_pacific}
     else 
-      p #{msg.time_pacific}
+      p #{msg.date_only + ' ' + msg.time_pacific}
     br
   
   a(href='/new') New Message
